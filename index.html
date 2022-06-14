@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+  <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+
+  <title>Frontend Mentor | Intro section with dropdown navigation</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="mainNav">
+    <div class="navLogo">
+      <img src="./images/logo.svg" alt="">
+    </div>
+
+    <div onClick="toggleMenu()" class="menu-btn" id="menu-btn"></div>
+
+    <div class="jsNav nav-bar" id="nav-links">
+      <div class="navSinistra">
+        <div class="arrowNav spaceNav featureAprire">
+          <p class="moreSpace accordion">Features <img id="rotateArrow" src="./images/icon-arrow-down.svg" alt=""></p>
+          <div class="panel" id="nascostaFeatures">
+            <p><img src="./images/icon-todo.svg" alt="">Todo List</p>
+            <p><img src="./images/icon-calendar.svg" alt="">Calender</p>
+            <p><img src="./images/icon-reminders.svg" alt="">Reminders</p>
+            <p><img src="./images/icon-planning.svg" alt="">Planning</p>
+          </div>
+        </div>
+        <div class="arrowNav spaceNav companyAprire">
+          <p class="moreSpace accordion">Company <img id="rotateArrow" src="./images/icon-arrow-down.svg" alt=""></p>
+          <div class="panel" id="nascostaCompany">
+            <p>History</p>
+            <p>Our Team</p>
+            <p>Blog</p>
+          </div>
+        </div>
+        <p class="spaceNav">Careers</p>
+        <p class="spaceNav">About</p>
+      </div>
+
+      <div class="navDestra">
+        <p class="spaceNav">Login</p>
+        <p class="register spaceNav">Register</p>
+      </div>
+
+    </div>
+  </div>
+  <div class="home" id="home">
+    <div class="homeSinistra">
+      <h1>Make remote work</h1>
+
+      <p class="text"> Get your team in sync, no matter your location. Streamline processes,
+        create team rituals, and watch productivity soar.</p>
+
+      <p class="button"> Learn more</p>
+
+      <div class="brands">
+        <img src="./images/client-databiz.svg" alt="">
+        <img src="./images/client-audiophile.svg" alt="">
+        <img src="./images/client-meet.svg" alt="">
+        <img src="./images/client-maker.svg" alt="">
+      </div>
+    </div>
+
+    <div class="homeDestra">
+      <img src="./images/image-hero-desktop.png" alt="">
+    </div>
+  </div>
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="#">Your Name Here</a>.
+  </div>
+
+<script src="script.js"></script>
+</body>
+
+</html>

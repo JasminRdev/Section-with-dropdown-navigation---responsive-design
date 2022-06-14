@@ -1,0 +1,437 @@
+:root {
+    --AlmostWhite: hsl(0, 0%, 98%);
+    --MediumGray: hsl(0, 0%, 41%);
+    --AlmostBlack: hsl(0, 0%, 8%);
+}
+
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Epilogue', sans-serif;
+}
+
+p {
+    font-size: 1rem;
+    color: var(--MediumGray)
+}
+
+p:hover {
+    cursor: pointer;
+    color: var(--AlmostBlack);
+    font-weight: bold;
+}
+
+body {
+    background-color: var(--AlmostWhite)
+}
+
+
+/* nav */
+/*   */
+/*   */
+/*   */
+/*   */
+/*   */
+
+.mainNav {
+
+    z-index: 100;
+    padding: 1.875rem 2.5rem;
+
+}
+
+.jsNav,
+.mainNav,
+.navDestra,
+.navSinistra {
+    display: flex;
+}
+
+.jsNav {
+    justify-content: space-between;
+    width: 100%;
+}
+
+
+.navLogo {
+    padding-right: 4rem;
+    align-self: center;
+}
+
+.spaceNav {
+    padding-left: 1.2rem;
+    padding-right: 1.2rem;
+    align-self: center;
+}
+
+
+.register {
+    border: var(--AlmostBlack) solid 1px;
+    border-radius: 15px;
+    padding: 0.75rem 1.375rem;
+    width: fit-content;
+}
+
+.arrowNav {
+    display: flex;
+    position: relative;
+}
+
+.arrowNav img {
+    padding-left: 5px;
+    width: 13px;
+    height: 8px;
+    align-self: center;
+    cursor: pointer;
+}
+
+
+
+/* hover */
+/*   */
+/*   */
+/*   */
+/*   */
+/*   */
+/*   */
+
+#nascostaFeatures,
+#nascostaCompany {
+    position: absolute;
+    top: 40px;
+    background-color: white;
+    box-shadow: 0 0 50px rgba(73, 73, 73, 0.203);
+    border-radius: 7px;
+    width: 100%;
+    opacity: 0.0;
+    -webkit-transition: all 500ms ease-in-out;
+    -moz-transition: all 500ms ease-in-out;
+    -ms-transition: all 500ms ease-in-out;
+    -o-transition: all 500ms ease-in-out;
+    transition: all 500ms ease-in-out;
+}
+
+#nascostaFeatures {
+    right: 15px;
+    padding: 20px 40px 20px 20px;
+}
+
+#nascostaCompany {
+    left: 15px;
+    padding: 20px;
+}
+
+#nascostaFeatures img {
+    width: 15%;
+    height: 15%;
+    padding-right: 15px;
+}
+
+#nascostaFeatures p,
+#nascostaCompany p {
+    white-space: nowrap;
+    display: flex;
+    padding: 10px;
+    position: relative;
+}
+
+.featureAprire:hover #nascostaFeatures,
+.companyAprire:hover #nascostaCompany {
+    opacity: 1;
+}
+
+
+
+.featureAprire:hover #rotateArrow,
+.companyAprire:hover #rotateArrow {
+    transform: rotate(180deg);
+    padding-right: 5px;
+}
+
+/* home */
+/*   */
+/*   */
+/*   */
+/*   */
+/*   */
+
+
+
+
+h1 {
+    font-size: 4rem;
+}
+
+.home {
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(2, 50%);
+    padding: 100px;
+    box-sizing: border-box;
+    z-index: -1;
+    position: relative;
+}
+
+.homeSinistra * {
+    margin: 50px;
+}
+
+.homeSinistra {
+    position: relative;
+}
+
+
+.homeDestra img {
+    width: 100%;
+}
+
+.button {
+    background-color: var(--AlmostBlack);
+    color: var(--AlmostWhite);
+
+    -webkit-transition: all 500ms ease-in-out;
+    -moz-transition: all 500ms ease-in-out;
+    -ms-transition: all 500ms ease-in-out;
+    -o-transition: all 500ms ease-in-out;
+    transition: all 500ms ease-in-out;
+
+    border: var(--AlmostBlack) solid 1px;
+    border-radius: 15px;
+    padding: 1.25rem 1.875rem;
+    width: fit-content;
+}
+
+.button:hover {
+    background-color: var(--AlmostWhite);
+    color: var(--AlmostBlack);
+
+    -webkit-transition: all 500ms ease-in-out;
+    -moz-transition: all 500ms ease-in-out;
+    -ms-transition: all 500ms ease-in-out;
+    -o-transition: all 500ms ease-in-out;
+    transition: all 500ms ease-in-out;
+}
+
+
+
+.text {
+    line-height: 1.5;
+    padding-right: 60px;
+}
+
+
+.brands {
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    bottom: 0px;
+    margin: 0;
+}
+
+.brands img {
+    margin: 0;
+    padding: 20px 20px 0 20px;
+    align-self: center;
+}
+
+
+@media (max-width: 1250px) {
+    .brands img {
+        width: 50px;
+    }
+}
+
+@media (max-width: 950px) {
+    .home{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .homeDestra{
+        order:-1;
+    }
+
+    .menu-btn{
+        position: absolute;
+        width: 1.875rem;
+        height: .15rem;
+        background-color: green;
+        border-radius:1rem;
+          top: 1.5rem;
+        right: 1rem;
+       z-index:3;
+       transition: .5s ease;
+      }
+      
+      .menu-btn::after{
+        content:"";
+        position: absolute;
+        top: .375rem;
+        width: 1.875rem;
+        height: .15rem;
+        background-color: black;
+        border-radius:1rem;
+      }
+      
+      .menu-btn::before{
+        content:"";
+        position: absolute;
+        top: -.375rem;
+        width: 1.875rem;
+        height: .15rem;
+        background-color: black;
+        border-radius:1rem;
+      }
+
+
+
+      .nav-bar{
+        opacity: 0;
+        transition: .5s ease;
+      }
+      
+      .nav-links-open{
+        z-index: 2;
+        position: absolute;
+        right: 0;
+        background-color:white;
+        opacity: 1;
+        flex-direction: column;
+        height:100%;
+        width: 15rem;
+        padding-top: 5rem;
+        }
+
+  
+
+        .mainNav{
+            padding:0;
+            justify-content:space-between;
+        }
+
+    .background{
+        background-color: rgba(0, 0, 0, 0.445);
+    }
+
+
+.jsNav{
+    justify-content: start;
+}
+
+        .navSinistra{
+            flex-direction: column;
+        }
+
+     
+
+        .spaceNav {
+            align-self: auto;
+            padding-top: 1rem;
+        }
+        
+       
+
+        .navDestra{
+            margin: 1rem;
+            flex-direction: column;
+        }
+
+        .register{
+            margin: 0 auto;
+            width: 70%;
+        }
+
+        .navDestra p {
+            text-align: center;
+            padding: 1rem;
+        }
+
+        .navLogo img{
+            position: absolute;
+            top: 1rem;
+            left: 1rem;
+        }
+
+        
+.menu-btn-open{
+    transform: rotate(45deg);
+  }
+  
+  .menu-btn-open::before{
+    opacity: 0;
+  }
+  .menu-btn-open:after{
+    top: 0;
+    transform: rotate(90deg);
+  }
+
+
+  .arrowNav img{
+    padding: 0 1rem;
+  }
+  
+
+#nascostaFeatures, #nascostaCompany{
+    display: block;
+    position: relative;
+    top: 0;
+    padding: 0;
+    right: 0;
+    box-shadow: none;
+}
+
+.moreSpace{
+    margin-bottom: 1rem;
+}
+
+#nascostaFeatures p{
+    align-items:center;
+}
+
+.arrowNav{
+    flex-direction: column;
+}
+
+
+
+
+
+.panel {
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+  }
+
+
+
+  .homeSinistra *{
+    margin: 0;
+  }
+
+  .home {
+    padding: 1rem;
+  }
+  .homeSinistra h1{
+    text-align: center;
+    font-size: 2rem;
+    margin: 2rem 0 ;
+  }
+
+  .homeSinistra p{
+    text-align:center;
+  }
+
+  .text{
+    padding: 0;
+  }
+
+  .button{
+    margin: 1rem auto;
+  }
+
+  .brands{
+    position: relative;
+  }
+
+}
+
